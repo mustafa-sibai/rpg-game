@@ -2,6 +2,15 @@
 #include <iostream>
 #include "Math.h"
 
+Player::Player() :
+	bulletSpeed(0.5f), playerSpeed(1.0f)
+{
+}
+
+Player::~Player()
+{
+}
+
 void Player::Initialize()
 {
 	boundingRectangle.setFillColor(sf::Color::Transparent);
@@ -69,7 +78,6 @@ void Player::Update(float deltaTime, Skeleton& skeleton)
 	}
 
 	boundingRectangle.setPosition(sprite.getPosition());
-
 
 	if (Math::DidRectCollide(sprite.getGlobalBounds(), skeleton.sprite.getGlobalBounds()))
 	{

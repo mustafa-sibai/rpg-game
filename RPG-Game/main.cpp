@@ -45,9 +45,12 @@ int main()
 				window.close();
 		}
 
+		sf::Vector2f mousePosition = sf::Vector2f(sf::Mouse::getPosition(window));
+		std::cout << "Mouse Position: " << mousePosition.x << " " << mousePosition.y << std::endl;
+
 		frameRate.Update(deltaTime);
 		skeleton.Update(deltaTime);
-		player.Update(deltaTime, skeleton);
+		player.Update(deltaTime, skeleton, mousePosition);
 		//-------------------------------- UPDATE --------------------------------
 
 		//-------------------------------- DRAW --------------------------------

@@ -11,7 +11,7 @@ private:
 	std::vector<Bullet> bullets;
 
 	float maxFireRate;
-	float fireRateTimer;
+	double fireRateTimer;
 
 	float playerSpeed;
 
@@ -27,6 +27,6 @@ public:
 
 	void Initialize();
 	void Load();
-	void Update(float deltaTime, Skeleton& skeleton, sf::Vector2f& mousePosition);
+	void Update(double deltaTime, Skeleton& skeleton, sf::Vector2f& mousePosition);
 	void Draw(sf::RenderWindow& window);
 };

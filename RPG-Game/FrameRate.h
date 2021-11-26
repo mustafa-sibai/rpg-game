@@ -7,7 +7,7 @@ private:
 	sf::Text frameRateText;
 	sf::Font font;
 
-	float timer;
+	double timer;
 
 public:
 	FrameRate();

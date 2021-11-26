@@ -60,7 +60,7 @@ void Skeleton::Load()
 	}
 }
 
-void Skeleton::Update(float deltaTime)
+void Skeleton::Update(double deltaTime)
 {
 	if (health > 0)
 	{

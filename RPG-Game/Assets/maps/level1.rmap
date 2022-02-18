@@ -1,9 +1,12 @@
 [Map]
-tilesheet="D:/rpg-game/RPG-Game/Assets/World/Prison/Tilesheet.png"
+version=1
+tilesheet=D:/rpg-game/RPG-Game/Assets/World/Prison/Tilesheet.png
 name=Level 1
-tile-width=16
-tile-height=16
-scale-x=5
-scale-y=5
-
-data=120, 121, 122, 144, 145, 156
+mapWidth=3
+mapHeight=2
+tileWidth=16
+tileHeight=16
+scaleX=5
+scaleY=5
+dataLength=6
+data=120, 121, 122, 144, 145, 146,;

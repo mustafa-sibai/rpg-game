@@ -1,35 +1,33 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-
-#include "FrameRate.h"
-#include "Map.h"
-#include "Player.h"
-#include "Skeleton.h"
+#include "Grid.h"
+#include "MouseTile.h"
 
 int main()
 {
 	sf::ContextSettings settings;
 	settings.antialiasingLevel = 8;
-	sf::RenderWindow window(sf::VideoMode(1920, 1080), "RPG Game", sf::Style::Default, settings);
+	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Map Editor", sf::Style::Default, settings);
 	window.setFramerateLimit(360);
 
-	FrameRate frameRate;
-	Map map;
-	Player player;
-	Skeleton skeleton;
+	Grid grid(
+		sf::Vector2f(0, 0),
+		sf::Vector2i(16, 16),
+		sf::Vector2i(10, 5),
+		sf::Vector2i(10, 10),
+		sf::Color(255, 255, 255, 128),
+		2);
+
+	MouseTile mouseTile(sf::Vector2i(16, 16), sf::Vector2f(10, 10));
 
 	//-------------------------------- INITIALIZE --------------------------------
-	frameRate.Initialize();
-	map.Initialize();
-	player.Initialize();
-	skeleton.Initialize();
+	grid.Initialize();
+	mouseTile.Initialize();
 	//-------------------------------- INITIALIZE --------------------------------
 
 	//-------------------------------- LOAD --------------------------------
-	frameRate.Load();
-	map.Load("assets/maps/level1.rmap");
-	player.Load();
-	skeleton.Load();
+	grid.Load();
+	mouseTile.Load();
 	//-------------------------------- LOAD --------------------------------
 
 	sf::Clock clock;
@@ -49,18 +47,14 @@ int main()
 
 		sf::Vector2f mousePosition = sf::Vector2f(sf::Mouse::getPosition(window));
 
-		frameRate.Update(deltaTime);
-		map.Update(deltaTime);
-		skeleton.Update(deltaTime);
-		player.Update(deltaTime, skeleton, mousePosition);
+		grid.Update(deltaTime);
+		mouseTile.Update(deltaTime, mousePosition);
 		//-------------------------------- UPDATE --------------------------------
 
 		//-------------------------------- DRAW --------------------------------
 		window.clear(sf::Color::Black);
-		map.Draw(window);
-		skeleton.Draw(window);
-		player.Draw(window);
-		frameRate.Draw(window);
+		grid.Draw(window);
+		mouseTile.Draw(window);
 		window.display();
 		//-------------------------------- DRAW --------------------------------
 	}

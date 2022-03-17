@@ -161,13 +161,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Map.cpp" />
     <ClCompile Include="src\MouseTile.cpp" />
     <ClCompile Include="src\Grid.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Map.h" />
     <ClInclude Include="src\MouseTile.h" />
     <ClInclude Include="src\Grid.h" />
+    <ClInclude Include="src\Tile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

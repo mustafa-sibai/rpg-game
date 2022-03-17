@@ -24,12 +24,21 @@
     <ClCompile Include="src\MouseTile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Grid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\MouseTile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

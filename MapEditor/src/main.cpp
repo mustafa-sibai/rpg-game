@@ -3,6 +3,9 @@
 #include "Grid.h"
 #include "MouseTile.h"
 #include "Map.h"
+#include "GUI/Button.h"
+
+using namespace GUI;
 
 int main()
 {
@@ -19,20 +22,24 @@ int main()
 		sf::Color(255, 255, 255, 128),
 		2);
 
-	MouseTile mouseTile(sf::Vector2i(16, 16), sf::Vector2f(10, 10), sf::Vector2f(200, 150));
+	MouseTile mouseTile(grid, sf::Vector2i(16, 16), sf::Vector2f(10, 10), sf::Vector2f(200, 150));
 
 	Map map(grid, mouseTile);
+
+	Button button(sf::Vector2f(100, 50), sf::Vector2f(3, 3));
 
 	//-------------------------------- INITIALIZE --------------------------------
 	grid.Initialize();
 	mouseTile.Initialize();
 	map.Initialize();
+	button.Initialize();
 	//-------------------------------- INITIALIZE --------------------------------
 
 	//-------------------------------- LOAD --------------------------------
 	grid.Load();
 	mouseTile.Load();
 	map.Load();
+	button.Load();
 	//-------------------------------- LOAD --------------------------------
 
 	sf::Clock clock;
@@ -55,6 +62,12 @@ int main()
 		mouseTile.Update(deltaTime, mousePosition);
 		grid.Update(deltaTime);
 		map.Update(deltaTime, mousePosition);
+		button.Update(deltaTime, mousePosition);
+
+		if (button.IsPressed())
+		{
+			std::cout << "HAHAHAHA, BUTTON IS COOL!!" << std::endl;
+		}
 		//-------------------------------- UPDATE --------------------------------
 
 		//-------------------------------- DRAW --------------------------------
@@ -62,6 +75,7 @@ int main()
 		grid.Draw(window);
 		mouseTile.Draw(window);
 		map.Draw(window);
+		button.Draw(window);
 		window.display();
 		//-------------------------------- DRAW --------------------------------
 	}

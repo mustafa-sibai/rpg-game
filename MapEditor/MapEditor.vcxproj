@@ -161,12 +161,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\GUI\Button.cpp" />
     <ClCompile Include="src\Map.cpp" />
     <ClCompile Include="src\MouseTile.cpp" />
     <ClCompile Include="src\Grid.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\GUI\Button.h" />
     <ClInclude Include="src\Map.h" />
     <ClInclude Include="src\MouseTile.h" />
     <ClInclude Include="src\Grid.h" />

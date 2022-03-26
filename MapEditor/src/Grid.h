@@ -8,6 +8,7 @@ private:
 	sf::RectangleShape* m_vLine;
 
 	sf::Vector2f m_position;
+	sf::Vector2f m_size;
 	sf::Vector2i m_scale;
 	sf::Vector2i m_totalCells;
 	sf::Vector2i m_cellSize;
@@ -32,6 +33,9 @@ public:
 	void Load();
 	void Update(double deltaTime);
 	void Draw(sf::RenderWindow& window);
+
+	inline const sf::Vector2f& GetPosition() const { return m_position; }
+	inline const sf::Vector2f& GetSize() const { return m_size; }
 
 	inline const sf::Vector2i& GetTotalCells() const { return m_totalCells; }
 };

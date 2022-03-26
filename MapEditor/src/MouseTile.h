@@ -1,9 +1,12 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Grid.h"
 
 class MouseTile
 {
 private:
+	const Grid& m_grid;
+
 	sf::Texture m_tileSheet;
 	sf::Sprite m_tile;
 
@@ -16,7 +19,8 @@ private:
 	bool m_isMouseOnGrid;
 
 public:
-	MouseTile(const sf::Vector2i& tileSize,
+	MouseTile(const Grid& grid, 
+		const sf::Vector2i& tileSize,
 		const sf::Vector2f& tileScale,
 		const sf::Vector2f& offset);
 	~MouseTile();

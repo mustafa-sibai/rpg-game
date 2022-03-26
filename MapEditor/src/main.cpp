@@ -21,7 +21,7 @@ int main()
 
 	MouseTile mouseTile(sf::Vector2i(16, 16), sf::Vector2f(10, 10), sf::Vector2f(200, 150));
 
-	Map map(mouseTile);
+	Map map(grid, mouseTile);
 
 	//-------------------------------- INITIALIZE --------------------------------
 	grid.Initialize();

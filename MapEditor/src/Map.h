@@ -1,17 +1,19 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "MouseTile.h"
+#include "Grid.h"
 
 #define MAP_SIZE 50
 
 class Map
 {
 private:
+	const Grid& m_grid;
 	MouseTile& m_mouseTile;
 	sf::Sprite* m_mapSprites;
 
 public:
-	Map(MouseTile& mouseTile);
+	Map(const Grid& grid, MouseTile& mouseTile);
 	~Map();
 
 	void Initialize();

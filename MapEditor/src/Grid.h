@@ -32,4 +32,6 @@ public:
 	void Load();
 	void Update(double deltaTime);
 	void Draw(sf::RenderWindow& window);
+
+	inline const sf::Vector2i& GetTotalCells() const { return m_totalCells; }
 };

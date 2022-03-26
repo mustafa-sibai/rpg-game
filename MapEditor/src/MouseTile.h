@@ -26,11 +26,17 @@ public:
 	void Update(double deltaTime, const sf::Vector2f& mousePosition);
 	void Draw(sf::RenderWindow& window);
 
-
 	/// <summary>
 	/// Returns whether the mouse was clicked on a tile or not and the position of the tile.
 	/// </summary>
 	/// <param name="tilePosition">OUT DATA - returns the tile position which was clicked on by the mouse.</param>
+	/// <param name="gridPosition"></param>
+	/// <param name="mousePosition"></param>
 	/// <returns>Returns whether the mouse was clicked on a tile or not.</returns>
-	bool IsMouseClickedOnTile(sf::Vector2f& tilePosition, const sf::Vector2f& mousePosition) const;
+	bool IsMouseClickedOnTile(
+		sf::Vector2f& tilePosition,
+		sf::Vector2i& gridPosition,
+		const sf::Vector2f& mousePosition) const;
+
+	inline const sf::Sprite& GetSprite() const { return m_tile; }
 };

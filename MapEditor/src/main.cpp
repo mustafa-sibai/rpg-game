@@ -4,6 +4,7 @@
 #include "MouseTile.h"
 #include "Map.h"
 #include "GUI/Button.h"
+#include "MapSaver.h"
 
 using namespace GUI;
 
@@ -27,6 +28,7 @@ int main()
 	Map map(grid, mouseTile);
 
 	Button button(sf::Vector2f(100, 50), sf::Vector2f(3, 3));
+	MapSaver mapSever;
 
 	//-------------------------------- INITIALIZE --------------------------------
 	grid.Initialize();
@@ -66,7 +68,24 @@ int main()
 
 		if (button.IsPressed())
 		{
-			std::cout << "HAHAHAHA, BUTTON IS COOL!!" << std::endl;
+			MapData mapData(
+				"assets/world/prison/tilesheet.png",
+				"Level 1",
+				grid.GetPosition().x,
+				grid.GetPosition().y,
+				grid.GetCellSize().x,
+				grid.GetCellSize().y,
+				grid.GetTotalCells().x,
+				grid.GetTotalCells().y,
+				grid.GetScale().x,
+				grid.GetScale().y,
+				MAP_SIZE,
+				map.GetMapIDs());
+
+			std::cout << grid.GetSize().x << std::endl;
+			mapSever.Save("TheXFile.rmap", mapData);
+
+			std::cout << "Saved map to file!" << std::endl;
 		}
 		//-------------------------------- UPDATE --------------------------------
 

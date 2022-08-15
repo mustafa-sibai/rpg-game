@@ -9,6 +9,7 @@ private:
 
 	sf::Texture m_tileSheet;
 	sf::Sprite m_tile;
+	int m_currentTileID;
 
 	sf::Vector2f m_tilePosition;
 	sf::Vector2i m_tileGridPosition;
@@ -19,7 +20,7 @@ private:
 	bool m_isMouseOnGrid;
 
 public:
-	MouseTile(const Grid& grid, 
+	MouseTile(const Grid& grid,
 		const sf::Vector2i& tileSize,
 		const sf::Vector2f& tileScale,
 		const sf::Vector2f& offset);
@@ -43,4 +44,5 @@ public:
 		const sf::Vector2f& mousePosition) const;
 
 	inline const sf::Sprite& GetSprite() const { return m_tile; }
+	inline int GetCurrentTileID() { return m_currentTileID; }
 };

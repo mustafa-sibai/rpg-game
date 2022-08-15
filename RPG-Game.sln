@@ -4,8 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG-Game", "RPG-Game\RPG-Game.vcxproj", "{009AA681-9C95-4893-B41E-C74852EC095E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8553C0FD-FD24-4370-8755-15119905508B} = {8553C0FD-FD24-4370-8755-15119905508B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapEditor", "MapEditor\MapEditor.vcxproj", "{536D9782-9191-48C5-ADC4-1ADF809CC398}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8553C0FD-FD24-4370-8755-15119905508B} = {8553C0FD-FD24-4370-8755-15119905508B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "core\core.vcxproj", "{8553C0FD-FD24-4370-8755-15119905508B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +39,14 @@ Global
 		{536D9782-9191-48C5-ADC4-1ADF809CC398}.Release|x64.Build.0 = Release|x64
 		{536D9782-9191-48C5-ADC4-1ADF809CC398}.Release|x86.ActiveCfg = Release|Win32
 		{536D9782-9191-48C5-ADC4-1ADF809CC398}.Release|x86.Build.0 = Release|Win32
+		{8553C0FD-FD24-4370-8755-15119905508B}.Debug|x64.ActiveCfg = Debug|x64
+		{8553C0FD-FD24-4370-8755-15119905508B}.Debug|x64.Build.0 = Debug|x64
+		{8553C0FD-FD24-4370-8755-15119905508B}.Debug|x86.ActiveCfg = Debug|Win32
+		{8553C0FD-FD24-4370-8755-15119905508B}.Debug|x86.Build.0 = Debug|Win32
+		{8553C0FD-FD24-4370-8755-15119905508B}.Release|x64.ActiveCfg = Release|x64
+		{8553C0FD-FD24-4370-8755-15119905508B}.Release|x64.Build.0 = Release|x64
+		{8553C0FD-FD24-4370-8755-15119905508B}.Release|x86.ActiveCfg = Release|Win32
+		{8553C0FD-FD24-4370-8755-15119905508B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

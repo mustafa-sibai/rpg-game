@@ -1,6 +1,6 @@
 [Map]
 version=1
-tilesheet=D:/rpg-game/RPG-Game/Assets/World/Prison/Tilesheet.png
+tilesheet=assets/world/prison/tilesheet.png
 name=Level 1
 mapWidth=3
 mapHeight=2

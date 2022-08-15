@@ -29,7 +29,6 @@
     <ClCompile Include="src\Skeleton.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\MapData.h" />
     <ClInclude Include="src\MapLoader.h" />
     <ClInclude Include="src\Bullet.h" />
     <ClInclude Include="src\FrameRate.h" />
@@ -103,15 +102,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)dependencies\SFML\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)dependencies\SFML\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)dependencies\SFML\include;$(SolutionDir)dependencies\core\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)dependencies\SFML\lib;$(SolutionDir)dependencies\core\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Build\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin</OutDir>
     <IntDir>$(SolutionDir)Build\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)dependencies\SFML\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)dependencies\SFML\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)dependencies\SFML\include;$(SolutionDir)dependencies\core\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)dependencies\SFML\lib;$(SolutionDir)dependencies\core\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Build\$(MSBuildProjectName)\$(Platform)\$(Configuration)\bin</OutDir>
     <IntDir>$(SolutionDir)Build\$(MSBuildProjectName)\$(Platform)\$(Configuration)\Intermediate</IntDir>
   </PropertyGroup>
@@ -121,6 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,6 +135,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,6 +150,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,6 +166,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

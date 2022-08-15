@@ -65,8 +65,5 @@
     <ClInclude Include="src\MapLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\MapData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

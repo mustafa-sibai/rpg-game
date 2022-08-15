@@ -2,7 +2,7 @@
 #include <iostream>
 
 Map::Map(const Grid& grid, MouseTile& mouseTile) :
-	m_grid(grid), m_mouseTile(mouseTile), m_mapSprites(nullptr)
+	m_grid(grid), m_mouseTile(mouseTile), m_mapSprites(nullptr), m_mapIDs(nullptr)
 {
 }
 
@@ -13,6 +13,8 @@ Map::~Map()
 void Map::Initialize()
 {
 	m_mapSprites = new sf::Sprite[MAP_SIZE];
+	m_mapIDs = new int[MAP_SIZE];
+	memset(m_mapIDs, 0, sizeof(int) * MAP_SIZE);
 }
 
 void Map::Load()
@@ -27,6 +29,7 @@ void Map::Update(double deltaTime, const sf::Vector2f& mousePosition)
 	if (m_mouseTile.IsMouseClickedOnTile(tilePosition, gridPosition, mousePosition))
 	{
 		int i = gridPosition.x + gridPosition.y * m_grid.GetTotalCells().x;
+		m_mapIDs[i] = m_mouseTile.GetCurrentTileID();
 		m_mapSprites[i] = m_mouseTile.GetSprite();
 	}
 }

@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Tile.h"
 #include "MapLoader.h"
-#include "MapData.h"
+#include <core/MapData.h>
 
 class Map
 {

@@ -26,7 +26,9 @@ void MouseTile::Load()
 {
 	m_tileSheet.loadFromFile("assets/world/prison/tilesheet.png");
 	m_tile.setTexture(m_tileSheet);
-	m_tile.setTextureRect(sf::IntRect(11 * m_tileSize.x, 0, m_tileSize.x, m_tileSize.y));
+
+	m_currentTileID = 11;
+	m_tile.setTextureRect(sf::IntRect(m_currentTileID * m_tileSize.x, 0, m_tileSize.x, m_tileSize.y));
 	m_tile.setScale(m_tileScale);
 }
 
@@ -34,7 +36,8 @@ void MouseTile::Update(double deltaTime, const sf::Vector2f& mousePosition)
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
-		m_tile.setTextureRect(sf::IntRect(12 * m_tileSize.x, 0, m_tileSize.x, m_tileSize.y));
+		m_currentTileID = 12;
+		m_tile.setTextureRect(sf::IntRect(m_currentTileID * m_tileSize.x, 0, m_tileSize.x, m_tileSize.y));
 	}
 
 	const sf::Vector2f& gridPosition = m_grid.GetPosition();

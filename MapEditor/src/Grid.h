@@ -36,6 +36,8 @@ public:
 
 	inline const sf::Vector2f& GetPosition() const { return m_position; }
 	inline const sf::Vector2f& GetSize() const { return m_size; }
+	inline const sf::Vector2i& GetScale() const { return m_scale; }
 
 	inline const sf::Vector2i& GetTotalCells() const { return m_totalCells; }
+	inline const sf::Vector2i& GetCellSize() const { return m_cellSize; }
 };

@@ -1,0 +1,19 @@
+[Map]
+version=1
+tilesheet=assets/world/prison/tilesheet.png
+mapName=Level 1
+mapPositionX=200
+mapPositionY=200
+cellSizeX=16
+cellSizeY=16
+totalCellsX=10
+totalCellsY=5
+mapScaleX=10
+mapScaleY=10
+dataLength=50
+data=
+11,11,0,0,0,0,0,0,11,11,
+0,11,0,0,0,0,0,0,11,0,
+0,0,0,0,0,0,0,0,0,0,
+11,0,0,0,0,0,0,0,0,11,
+11,11,0,0,0,0,0,0,0,11,
